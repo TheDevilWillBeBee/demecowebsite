@@ -16,27 +16,19 @@ import VideoBackground from "@/components/VideoBackground";
 import RecordedTalks from "@/components/HowToParticipate";
 import { Talk, Speaker } from "@/types";
 import { getSpeakerTalks } from "@/data/program";
-import { getSpeakerById } from "@/data/speakers";
 
 export default function Home() {
   const [selectedTalk, setSelectedTalk] = useState<Talk | null>(null);
-  const [selectedSpeaker, setSelectedSpeaker] = useState<Speaker | null>(null);
-  const [selectedOrganizer, setSelectedOrganizer] = useState<Speaker | null>(
-    null
-  );
+  const [selectedPerson, setSelectedPerson] = useState<Speaker | null>(null);
 
   const handleTalkClick = (talk: Talk) => {
-    setSelectedSpeaker(null);
+    setSelectedPerson(null);
     setSelectedTalk(talk);
   };
 
-  const handleSpeakerClick = (speaker: Speaker) => {
+  const handlePersonClick = (person: Speaker) => {
     setSelectedTalk(null);
-    setSelectedSpeaker(speaker);
-  };
-
-  const handleOrganizerClick = (organizer: Speaker) => {
-    setSelectedOrganizer(organizer);
+    setSelectedPerson(person);
   };
 
   return (
@@ -51,43 +43,25 @@ export default function Home() {
           <Abstract />
           <RecordedTalks />
           <Program onTalkClick={handleTalkClick} />
-          <Speakers onSpeakerClick={handleSpeakerClick} />
+          <Speakers onSpeakerClick={handlePersonClick} />
           <Sponsors />
-          <Organizers onOrganizerClick={handleOrganizerClick} />
+          <Organizers onOrganizerClick={handlePersonClick} />
           <Location />
         </div>
         <Footer />
 
-        {selectedTalk && (
-          <ProgramSlotModal
-            isOpen={true}
-            onClose={() => setSelectedTalk(null)}
-            title={selectedTalk.title}
-            date={selectedTalk.date}
-            description={selectedTalk.description}
-            speakers={selectedTalk.speakerIds.map((id) => getSpeakerById(id))}
-            onSpeakerClick={handleSpeakerClick}
-            recordingUrl={selectedTalk.recordingUrl}
-          />
-        )}
+        <ProgramSlotModal
+          talk={selectedTalk}
+          onClose={() => setSelectedTalk(null)}
+          onSpeakerClick={handlePersonClick}
+        />
 
-        {selectedSpeaker && (
-          <ProfileModal
-            isOpen={true}
-            onClose={() => setSelectedSpeaker(null)}
-            person={selectedSpeaker}
-            talks={getSpeakerTalks(selectedSpeaker.id)}
-            onTalkClick={handleTalkClick}
-          />
-        )}
-
-        {selectedOrganizer && (
-          <ProfileModal
-            isOpen={true}
-            onClose={() => setSelectedOrganizer(null)}
-            person={selectedOrganizer}
-          />
-        )}
+        <ProfileModal
+          person={selectedPerson}
+          onClose={() => setSelectedPerson(null)}
+          talks={selectedPerson ? getSpeakerTalks(selectedPerson.id) : undefined}
+          onTalkClick={handleTalkClick}
+        />
       </div>
     </main>
   );

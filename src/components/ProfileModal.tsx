@@ -5,22 +5,22 @@ import Modal from "./ui/Modal";
 import { Speaker, Talk } from "@/types";
 
 interface ProfileModalProps {
-  isOpen: boolean;
+  person: Speaker | null;
   onClose: () => void;
-  person: Speaker;
   talks?: Talk[];
   onTalkClick?: (talk: Talk) => void;
 }
 
 export default function ProfileModal({
-  isOpen,
-  onClose,
   person,
+  onClose,
   talks,
   onTalkClick,
 }: ProfileModalProps) {
+  if (!person) return null;
+
   return (
-    <Modal isOpen={isOpen} onClose={onClose}>
+    <Modal isOpen={true} onClose={onClose}>
       <div className="text-white">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-8">
           <div className="relative w-40 h-40 flex-shrink-0">

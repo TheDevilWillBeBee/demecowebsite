@@ -1,4 +1,4 @@
-import { Talk } from "@/types";
+import { Talk, Speaker } from "@/types";
 import { getSpeakerById } from "./speakers";
 
 // Fake data
@@ -224,8 +224,8 @@ This talk will give an overview of some of the main families of methods and pers
   ],
 };
 
-export const getTalkSpeakers = (talk: Talk) => {
-  return talk.speakerIds.map((id) => getSpeakerById(id)).filter(Boolean);
+export const getTalkSpeakers = (talk: Talk): Speaker[] => {
+  return talk.speakerIds.map((id) => getSpeakerById(id)).filter((speaker): speaker is Speaker => speaker !== undefined);
 };
 
 export const getSpeakerTalks = (speakerId: string): Talk[] => {
