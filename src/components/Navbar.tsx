@@ -11,8 +11,8 @@ const navItems = [
     to: "abstract",
   },
   {
-    name: "How to Participate",
-    to: "how-to-participate",
+    name: "Recorded Talks",
+    to: "recorded-talks",
   },
   {
     name: "Program",

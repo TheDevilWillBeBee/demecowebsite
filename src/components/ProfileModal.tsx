@@ -66,6 +66,7 @@ export default function ProfileModal({
               {talks.map((talk, index) => (
                 <button
                   key={index}
+                  type="button"
                   onClick={() => onTalkClick?.(talk)}
                   className="w-full p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-all hover:scale-105 text-left"
                 >

@@ -13,7 +13,7 @@ import ProgramSlotModal from "@/components/ProgramSlotModal";
 import ProfileModal from "@/components/ProfileModal";
 import Organizers from "@/components/Organizers";
 import VideoBackground from "@/components/VideoBackground";
-import HowToParticipate from "@/components/HowToParticipate";
+import RecordedTalks from "@/components/HowToParticipate";
 import { Talk, Speaker } from "@/types";
 import { getSpeakerTalks } from "@/data/program";
 import { getSpeakerById } from "@/data/speakers";
@@ -49,7 +49,7 @@ export default function Home() {
         <Header />
         <div className="container mx-auto px-4">
           <Abstract />
-          <HowToParticipate />
+          <RecordedTalks />
           <Program onTalkClick={handleTalkClick} />
           <Speakers onSpeakerClick={handleSpeakerClick} />
           <Sponsors />
@@ -67,6 +67,7 @@ export default function Home() {
             description={selectedTalk.description}
             speakers={selectedTalk.speakerIds.map((id) => getSpeakerById(id))}
             onSpeakerClick={handleSpeakerClick}
+            recordingUrl={selectedTalk.recordingUrl}
           />
         )}
 

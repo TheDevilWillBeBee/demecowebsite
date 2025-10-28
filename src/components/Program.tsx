@@ -2,10 +2,8 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { Talk, Speaker } from "@/types";
-import ProgramSlotModal from "./ProgramSlotModal";
-import ProfileModal from "./ProfileModal";
-import { program, getTalkSpeakers, getSpeakerTalks } from "@/data/program";
+import { Talk } from "@/types";
+import { program, getTalkSpeakers } from "@/data/program";
 
 interface ProgramProps {
   onTalkClick: (talk: Talk) => void;
@@ -19,17 +17,6 @@ const days = [
 
 export default function Program({ onTalkClick }: ProgramProps) {
   const [activeDay, setActiveDay] = useState("Day 1");
-  const [selectedTalk, setSelectedTalk] = useState<Talk | null>(null);
-  const [selectedSpeaker, setSelectedSpeaker] = useState<Speaker | null>(null);
-
-  const handleTalkClick = (talk: Talk) => {
-    setSelectedTalk(talk);
-  };
-
-  const handleSpeakerClick = (speaker: Speaker) => {
-    setSelectedTalk(null);
-    setSelectedSpeaker(speaker);
-  };
 
   return (
     <section id="program" className="sm:py-20 py-12">
@@ -71,92 +58,74 @@ export default function Program({ onTalkClick }: ProgramProps) {
                 transition={{ duration: 0.3 }}
                 className="w-full"
               >
-                {program[activeDay]?.map((talk, index) => (
-                  <div
-                    key={index}
-                    className="w-full border-b border-white/10 last:border-b-0 sm:py-4 py-2 last:pb-0 last:my-0"
-                    style={{ zIndex: program[activeDay].length - index }}
-                  >
-                    <motion.button
-                      onClick={() =>
-                        talk.speakerIds.length > 0 && onTalkClick(talk)
-                      }
-                      whileHover={
-                        talk.speakerIds.length > 0
-                          ? { scale: 1.02, zIndex: 10 }
-                          : {}
-                      }
-                      transition={{ duration: 0.3 }}
-                      className={`w-full flex rounded-xl items-start py-4 text-left px-2 relative
-                        ${
-                          talk.isBreak
-                            ? "bg-black/20 backdrop-blur-xl"
-                            : "bg-black/30 backdrop-blur-xl hover:bg-black/40"
-                        }
-                        ${
-                          talk.speakerIds.length > 0
-                            ? "cursor-pointer transition-colors duration-300 ease-in-out"
-                            : "cursor-default"
-                        }`}
+                {program[activeDay]?.map((talk, index) => {
+                  const speakers = getTalkSpeakers(talk);
+
+                  return (
+                    <div
+                      key={index}
+                      className="w-full border-b border-white/10 last:border-b-0 sm:py-4 py-2 last:pb-0 last:my-0"
+                      style={{ zIndex: program[activeDay].length - index }}
                     >
-                      <div className="w-16 flex-shrink-0 text-white/60">
-                        {talk.time}
-                      </div>
-                      <div>
-                        <h3
-                          className={`font-semibold ${
-                            !talk.isBreak ? "text-white" : "text-white/70"
+                      <motion.button
+                        onClick={() =>
+                          talk.speakerIds.length > 0 && onTalkClick(talk)
+                        }
+                        whileHover={
+                          talk.speakerIds.length > 0
+                            ? { scale: 1.02, zIndex: 10 }
+                            : {}
+                        }
+                        transition={{ duration: 0.3 }}
+                        className={`w-full flex rounded-xl items-start py-4 text-left px-2 relative
+                          ${
+                            talk.isBreak
+                              ? "bg-black/20 backdrop-blur-xl"
+                              : "bg-black/30 backdrop-blur-xl hover:bg-black/40"
+                          }
+                          ${
+                            talk.speakerIds.length > 0
+                              ? "cursor-pointer transition-colors duration-300 ease-in-out"
+                              : "cursor-default"
                           }`}
-                        >
-                          {talk.title}
-                        </h3>
-                        <div className="flex flex-wrap gap-x-2">
-                          {getTalkSpeakers(talk).map((speaker, idx) => (
-                            <p
-                              key={idx}
-                              className={`text-sm whitespace-nowrap ${
-                                !talk.isBreak
-                                  ? "text-white/90"
-                                  : "text-white/60"
-                              }`}
-                            >
-                              {speaker?.name}
-                              {idx < getTalkSpeakers(talk).length - 1 && ","}
-                            </p>
-                          ))}
+                      >
+                        <div className="w-16 flex-shrink-0 text-white/60">
+                          {talk.time}
                         </div>
-                      </div>
-                    </motion.button>
-                  </div>
-                ))}
+                        <div>
+                          <h3
+                            className={`font-semibold ${
+                              !talk.isBreak ? "text-white" : "text-white/70"
+                            }`}
+                          >
+                            {talk.title}
+                          </h3>
+                          <div className="flex flex-wrap gap-x-2">
+                            {speakers.map((speaker, idx) => (
+                              <p
+                                key={idx}
+                                className={`text-sm whitespace-nowrap ${
+                                  !talk.isBreak
+                                    ? "text-white/90"
+                                    : "text-white/60"
+                                }`}
+                              >
+                                {speaker?.name}
+                                {idx < speakers.length - 1 && ","}
+                              </p>
+                            ))}
+                          </div>
+                        </div>
+                      </motion.button>
+                    </div>
+                  );
+                })}
               </motion.div>
             </AnimatePresence>
           </div>
         </motion.div>
       </div>
 
-      {/* Modals */}
-      <ProgramSlotModal
-        isOpen={selectedTalk !== null}
-        onClose={() => setSelectedTalk(null)}
-        title={selectedTalk?.title || ""}
-        date={selectedTalk?.date || ""}
-        description={selectedTalk?.description || ""}
-        speakers={
-          selectedTalk ? (getTalkSpeakers(selectedTalk) as Speaker[]) : []
-        }
-        onSpeakerClick={handleSpeakerClick}
-      />
-
-      {selectedSpeaker && (
-        <ProfileModal
-          isOpen={true}
-          onClose={() => setSelectedSpeaker(null)}
-          person={selectedSpeaker}
-          talks={getSpeakerTalks(selectedSpeaker.id)}
-          onTalkClick={handleTalkClick}
-        />
-      )}
     </section>
   );
 }

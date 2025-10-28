@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { abstractDescription, abstractImage } from "@/data/abstract";
+import { abstractHighlight, abstractImage, abstractParagraphs } from "@/data/abstract";
 
 export default function Abstract() {
   return (
@@ -19,7 +19,12 @@ export default function Abstract() {
             Conference Abstract
           </h2>
           <div className="text-white/90 space-y-6 text-justify">
-            <p>{abstractDescription}</p>
+            {abstractParagraphs.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+            <p>
+              <strong>{abstractHighlight}</strong>
+            </p>
             <div className="bg-black/30 backdrop-blur-sm p-4 rounded-lg flex justify-center">
               <div className="relative w-full h-64 sm:h-96">
                 <Image

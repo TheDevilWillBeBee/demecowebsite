@@ -28,6 +28,7 @@ export const program: Record<string, Talk[]> = {
       description: "",
       speakerIds: ["bert-chan"], // Note: Chan is not in speakers.ts, needs to be added
       isBreak: false,
+      recordingUrl: "https://youtu.be/pMXTM9wkE5Q",
     },
     {
       time: "11:50",
@@ -44,6 +45,7 @@ export const program: Record<string, Talk[]> = {
       description: "",
       speakerIds: ["jordan-cotler"],
       isBreak: false,
+      recordingUrl: "https://youtu.be/E8LPwc_5obI",
     },
     {
       time: "15:30",
@@ -60,6 +62,7 @@ export const program: Record<string, Talk[]> = {
       description: "",
       speakerIds: ["sebastian-risi"],
       isBreak: false,
+      recordingUrl: "https://youtu.be/mjHh2-HB58M",
     },
   ],
   "Day 2": [
@@ -98,6 +101,7 @@ export const program: Record<string, Talk[]> = {
       - Demo video: https://youtu.be/bAJIETmC-6o`,
       speakerIds: ["clement-moulin-frier"],
       isBreak: false,
+      recordingUrl: "https://youtu.be/za9cMqziIcA",
     },
     {
       time: "11:50",
@@ -114,6 +118,7 @@ export const program: Record<string, Talk[]> = {
       description: "Do LLMs know their own measure? By investigating the gap between the explicit and the implicit knowledge of LLMs, we are led to consider a class of information games playable by LLM agents. This space of games is very rich and possesses interesting properties. We propose to use an evolutionary dynamics in this space as a means to measure, in a theoretically motivated way, the general capabilities of LLMs.",
       speakerIds: ["clement-hongler"],
       isBreak: false,
+      recordingUrl: "https://youtu.be/kVyV2P5FYIw",
     },
     {
       time: "15:30",
@@ -130,6 +135,7 @@ export const program: Record<string, Talk[]> = {
       description: "",
       speakerIds: ["eyvind-niklasson"],
       isBreak: false,
+      recordingUrl: "https://youtu.be/ynrqJH_J3Bc",
     },
     {
       time: "16:40",
@@ -138,6 +144,7 @@ export const program: Record<string, Talk[]> = {
       description: "This presentation will explore the limitations of conventional diversity-driven approaches that rely on monolithic behavioral descriptions in the context of open-ended discovery of self-organized structures. I'll then propose a shift from standard diversity search to what I call *meta*-diversity search, whose core idea is to continuously learn and expand the ways in which a system's behaviors can be characterized and explored.",
       speakerIds: ["mayalen-etcheverry"],
       isBreak: false,
+      recordingUrl: "https://youtu.be/CXXP1c4Y900",
     },
     {
       time: "17:20",
@@ -146,6 +153,7 @@ export const program: Record<string, Talk[]> = {
       description: "Traditional digital circuit design hinges on precise gate connectivity. This presentation explores a radical alternative: randomly wired circuits where only gate functions are tunable. We investigate the intriguing question of whether such a \"mess of wires\" can be transformed into a useful computing device, and present methods for achieving this.",
       speakerIds: ["alexander-mordvintsev"],
       isBreak: false,
+      recordingUrl: "https://youtu.be/Tu6bFT7_Oe8",
     },
     {
       time: "19:00",
@@ -178,6 +186,7 @@ This talk will give an overview of some of the main families of methods and pers
       speakerIds: ["trym-lindell"],
       
       isBreak: false,
+      recordingUrl: "https://youtu.be/467eWiZd330",
     },
     {
       time: "11:50",
@@ -194,6 +203,7 @@ This talk will give an overview of some of the main families of methods and pers
       description: "",
       speakerIds: ["akarsh-kumar"],
       isBreak: false,
+      recordingUrl: "https://youtu.be/l_RJdGzzRYM",
     },
     {
       time: "15:30",
