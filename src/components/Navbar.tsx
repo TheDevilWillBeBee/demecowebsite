@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
+import NextLink from "next/link";
 import Image from "next/image";
 import { useVisibility } from "@/hooks/useVisibility";
 
@@ -36,7 +37,11 @@ const navItems = [
   },
 ];
 
-export default function Navbar() {
+interface NavbarProps {
+  edition?: string;
+}
+
+export default function Navbar({ edition }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isScrolled, isInactive } = useVisibility();
 
@@ -73,7 +78,7 @@ export default function Navbar() {
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 flex items-center gap-4">
               {isScrolled && (
                 <div
                   className="relative h-12 sm:h-16 w-40 cursor-pointer"
@@ -88,6 +93,31 @@ export default function Navbar() {
                   />
                 </div>
               )}
+              {/* Edition tabs */}
+              <div className={`flex items-center gap-2 ${
+                isInactive && !isScrolled ? "opacity-0" : "opacity-100"
+              } transition-opacity duration-300`}>
+                <NextLink
+                  href="/"
+                  className={`px-3 py-1 text-sm font-semibold rounded-full border transition-all duration-300 ${
+                    !edition
+                      ? "bg-white/20 text-white border-white/50"
+                      : "text-white/70 border-white/20 hover:bg-white/10 hover:text-white"
+                  }`}
+                >
+                  Current
+                </NextLink>
+                <NextLink
+                  href="/2025"
+                  className={`px-3 py-1 text-sm font-semibold rounded-full border transition-all duration-300 ${
+                    edition === "2025"
+                      ? "bg-white/20 text-white border-white/50"
+                      : "text-white/70 border-white/20 hover:bg-white/10 hover:text-white"
+                  }`}
+                >
+                  2025
+                </NextLink>
+              </div>
             </div>
 
             {/* Desktop Menu */}
@@ -169,6 +199,31 @@ export default function Navbar() {
       >
         <div className="flex items-center justify-center h-screen">
           <div className="px-2 pt-2 pb-3 space-y-4">
+            {/* Edition tabs for mobile */}
+            <div className="flex justify-center gap-4 mb-6 pb-4 border-b border-white/20">
+              <NextLink
+                href="/"
+                onClick={() => setIsMenuOpen(false)}
+                className={`px-4 py-2 text-base font-semibold rounded-full border transition-all ${
+                  !edition
+                    ? "bg-white/20 text-white border-white/50"
+                    : "text-white/70 border-white/20"
+                }`}
+              >
+                Current
+              </NextLink>
+              <NextLink
+                href="/2025"
+                onClick={() => setIsMenuOpen(false)}
+                className={`px-4 py-2 text-base font-semibold rounded-full border transition-all ${
+                  edition === "2025"
+                    ? "bg-white/20 text-white border-white/50"
+                    : "text-white/70 border-white/20"
+                }`}
+              >
+                2025
+              </NextLink>
+            </div>
             {navItems.map((item) => (
               <Link
                 key={item.name}

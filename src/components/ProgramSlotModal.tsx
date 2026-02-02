@@ -4,21 +4,24 @@ import Image from "next/image";
 import Modal from "./ui/Modal";
 import { motion } from "framer-motion";
 import { Speaker, Talk } from "@/types";
-import { getTalkSpeakers } from "@/data/program";
+import { getTalkSpeakers as defaultGetTalkSpeakers } from "@/data/program";
 
 interface ProgramSlotModalProps {
   talk: Talk | null;
   onClose: () => void;
   onSpeakerClick: (speaker: Speaker) => void;
+  getTalkSpeakersFunc?: (talk: Talk) => Speaker[];
 }
 
 export default function ProgramSlotModal({
   talk,
   onClose,
   onSpeakerClick,
+  getTalkSpeakersFunc,
 }: ProgramSlotModalProps) {
   if (!talk) return null;
 
+  const getTalkSpeakers = getTalkSpeakersFunc ?? defaultGetTalkSpeakers;
   const speakers = getTalkSpeakers(talk);
 
   return (

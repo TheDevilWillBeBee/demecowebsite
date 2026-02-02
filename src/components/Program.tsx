@@ -2,21 +2,33 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { Talk } from "@/types";
-import { program, getTalkSpeakers } from "@/data/program";
+import { Talk, Speaker } from "@/types";
+import { program as defaultProgram, getTalkSpeakers as defaultGetTalkSpeakers } from "@/data/program";
 
 interface ProgramProps {
   onTalkClick: (talk: Talk) => void;
+  programData?: Record<string, Talk[]>;
+  getTalkSpeakersFunc?: (talk: Talk) => Speaker[];
+  days?: { date: string; day: string }[];
 }
 
-const days = [
+const defaultDays = [
   { date: "May 26", day: "Day 1" },
   { date: "May 27", day: "Day 2" },
   { date: "May 28", day: "Day 3" },
 ];
 
-export default function Program({ onTalkClick }: ProgramProps) {
-  const [activeDay, setActiveDay] = useState("Day 1");
+export default function Program({
+  onTalkClick,
+  programData,
+  getTalkSpeakersFunc,
+  days
+}: ProgramProps) {
+  const program = programData ?? defaultProgram;
+  const getTalkSpeakers = getTalkSpeakersFunc ?? defaultGetTalkSpeakers;
+  const daysList = days ?? defaultDays;
+
+  const [activeDay, setActiveDay] = useState(daysList[0]?.day ?? "Day 1");
 
   return (
     <section id="program" className="sm:py-20 py-12">
@@ -33,7 +45,7 @@ export default function Program({ onTalkClick }: ProgramProps) {
           </h2>
 
           <div className="flex justify-center mb-4">
-            {days.map((day) => (
+            {daysList.map((day) => (
               <button
                 key={day.day}
                 onClick={() => setActiveDay(day.day)}

@@ -2,8 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   devIndicators: {
-    buildActivity: false,
-    buildActivityPosition: "bottom-right",
+    position: "bottom-right",
   },
   // Disable all development-only features
   experimental: {

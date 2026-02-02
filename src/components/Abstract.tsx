@@ -2,9 +2,23 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { abstractHighlight, abstractImage, abstractParagraphs } from "@/data/abstract";
+import {
+  abstractHighlight as defaultHighlight,
+  abstractImage as defaultImage,
+  abstractParagraphs as defaultParagraphs
+} from "@/data/abstract";
 
-export default function Abstract() {
+interface AbstractProps {
+  paragraphs?: string[];
+  highlight?: string;
+  image?: string;
+}
+
+export default function Abstract({ paragraphs, highlight, image }: AbstractProps) {
+  const abstractParagraphs = paragraphs ?? defaultParagraphs;
+  const abstractHighlight = highlight ?? defaultHighlight;
+  const abstractImage = image ?? defaultImage;
+
   return (
     <section id="abstract" className="sm:py-20 py-12">
       <div className="max-w-6xl mx-auto px-4">

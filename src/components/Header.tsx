@@ -6,10 +6,24 @@ import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 import { useVisibility } from "@/hooks/useVisibility";
 
-export default function Header() {
+// ============================================================================
+// PLACEHOLDER: Update these default values for the new edition
+// ============================================================================
+const DEFAULT_SUBTITLE = "Artificial Life Perspectives";
+const DEFAULT_DATE_LOCATION = "Dates TBD • EPFL, Lausanne";
+
+interface HeaderProps {
+  subtitle?: string;
+  dateLocation?: string;
+}
+
+export default function Header({ subtitle, dateLocation }: HeaderProps) {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const [gradientWidth, setGradientWidth] = useState(80);
   const { isScrolled, isInactive } = useVisibility();
+
+  const displaySubtitle = subtitle ?? DEFAULT_SUBTITLE;
+  const displayDateLocation = dateLocation ?? DEFAULT_DATE_LOCATION;
 
   useEffect(() => {
     const updateGradientWidth = () => {
@@ -86,10 +100,10 @@ export default function Header() {
               }`}
             >
               <p className="text-2xl md:text-3xl mb-4 text-gray-200">
-                Artificial Life Perspectives
+                {displaySubtitle}
               </p>
               <p className="text-lg md:text-2xl mb-8">
-                May 26-28, 2025 • EPFL, Lausanne
+                {displayDateLocation}
               </p>
             </div>
             <Link
