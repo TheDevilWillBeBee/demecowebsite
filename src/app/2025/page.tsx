@@ -48,10 +48,11 @@ export default function Edition2025() {
 
       {/* Content */}
       <div className="relative z-10">
-        <Navbar edition="2025" />
+        <Navbar edition="2025" logo="/logo-2025.png" />
         <Header
           subtitle="Artificial Life Perspectives"
           dateLocation="May 26-28, 2025 • EPFL, Lausanne"
+          logo="/logo-2025.png"
         />
         <div className="container mx-auto px-4">
           <Abstract
@@ -59,7 +60,23 @@ export default function Edition2025() {
             highlight={abstractHighlight2025}
             image={abstractImage2025}
           />
-          <RecordedTalks />
+          <RecordedTalks
+            firstParagraph={
+              <>
+                Recorded talks from Demeco 2025 are available on the Youtube channel{" "}
+                <a
+                  href="https://www.youtube.com/watch?v=tU6OOYZarNc&list=PLEt5M_lIDJdlVYeByo116YMdMPD-qcCak"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-300 hover:text-blue-200 underline"
+                >
+                  Artificial Life EPFL
+                </a>
+                .
+              </>
+            }
+            secondParagraph="You can also browse the 'Conference Program' below; clicking on the talk slots will give you a link to the recorded talk."
+          />
           <Program
             onTalkClick={handleTalkClick}
             programData={program2025}

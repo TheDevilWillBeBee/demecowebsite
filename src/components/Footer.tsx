@@ -10,10 +10,10 @@ export default function Footer() {
             <div className="flex items-center space-x-2 mb-2">
               <span>✉️</span>
               <a
-                href="mailto:demeco2025@gmail.com"
+                href="mailto:demeco2026@gmail.com"
                 className="hover:text-white transition-colors"
               >
-                demeco2025@gmail.com
+                demeco2026@gmail.com
               </a>
             </div>
           </div>
@@ -21,7 +21,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-semibold mb-4">Conference Details</h3>
             <p className="mb-2">
-              <span>📅</span> May 26-28, 2025
+              <span>📅</span> May 27-29, 2026
             </p>
             <div className="flex items-center space-x-2">
               <span>📍</span>
@@ -41,12 +41,12 @@ export default function Footer() {
             <div className="flex items-center space-x-2">
               <FaXTwitter className="h-5 w-5" />
               <a
-                href="https://twitter.com/demeco2025"
+                href="https://twitter.com/demeco2026"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
               >
-                @demeco2025
+                @demeco2026
               </a>
             </div>
           </div>
@@ -54,7 +54,7 @@ export default function Footer() {
 
         <div className="mt-8 pt-8 border-t border-white/10 text-center text-white/60">
           <p>
-            © 2025 Detection and Emergence of Complexity. All rights reserved.
+            © 2026 Detection and Emergence of Complexity. All rights reserved.
           </p>
           <p className="mt-2">
             Developed by{" "}

@@ -1,4 +1,5 @@
 import { Speaker } from "@/types";
+import { organizers2025 } from "./organizers";
 
 export const speakers2025: Speaker[] = [
   {
@@ -95,5 +96,7 @@ export const speakers2025: Speaker[] = [
 ];
 
 export const getSpeakerById2025 = (id: string): Speaker | undefined => {
-  return speakers2025.find((speaker) => speaker.id === id);
+  // First check speakers, then check organizers
+  return speakers2025.find((speaker) => speaker.id === id)
+    ?? organizers2025.find((organizer) => organizer.id === id);
 };

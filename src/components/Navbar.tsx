@@ -39,11 +39,14 @@ const navItems = [
 
 interface NavbarProps {
   edition?: string;
+  logo?: string;
 }
 
-export default function Navbar({ edition }: NavbarProps) {
+export default function Navbar({ edition, logo }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isScrolled, isInactive } = useVisibility();
+
+  const displayLogo = logo ?? "/logo-2026.png";
 
   // Handle scroll lock and prevent layout shift
   useEffect(() => {
@@ -85,7 +88,7 @@ export default function Navbar({ edition }: NavbarProps) {
                   onClick={handleLogoClick}
                 >
                   <Image
-                    src="/logo.png"
+                    src={displayLogo}
                     alt="Conference Logo"
                     fill
                     className="object-contain"

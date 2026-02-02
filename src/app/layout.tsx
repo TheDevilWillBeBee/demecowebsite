@@ -5,9 +5,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "DEMECO 2025 | Artificial Life Perspectives",
+  title: "DEMECO 2026 | Artificial Life Perspectives",
   description:
-    "Detection and Emergence of Complexity (DEMECO) 2025 - A workshop on Artificial Life perspectives, bringing together researchers and practitioners in the field of artificial life.",
+    "Detection and Emergence of Complexity (DEMECO) 2026 - A workshop on Artificial Life perspectives, bringing together researchers and practitioners in the field of artificial life.",
   keywords: [
     "Artificial Life",
     "Complexity Science",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     },
   ],
   openGraph: {
-    title: "DEMECO 2025 | Artificial Life Perspectives",
+    title: "DEMECO 2026 | Artificial Life Perspectives",
     description:
-      "Detection and Emergence of Complexity (DEMECO) 2025 - An workshop on Artificial Life perspectives at EPFL, Lausanne.",
+      "Detection and Emergence of Complexity (DEMECO) 2026 - A workshop on Artificial Life perspectives at EPFL, Lausanne.",
     url: "https://dem.eco",
     siteName: "DEMECO",
     locale: "en_US",
@@ -39,10 +39,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "DEMECO 2025 | Artificial Life Perspectives",
+    title: "DEMECO 2026 | Artificial Life Perspectives",
     description:
-      "Detection and Emergence of Complexity (DEMECO) 2025 - An workshop on Artificial Life perspectives at EPFL, Lausanne.",
-    creator: "@demeco2025",
+      "Detection and Emergence of Complexity (DEMECO) 2026 - A workshop on Artificial Life perspectives at EPFL, Lausanne.",
+    creator: "@demeco2026",
   },
   robots: {
     index: true,
@@ -61,13 +61,8 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/favicons/favicon-16x16.png",
-        sizes: "16x16",
-        type: "image/png",
-      },
-      {
-        url: "/favicons/favicon-32x32.png",
-        sizes: "32x32",
+        url: "/favicons/favicon-96x96.png",
+        sizes: "96x96",
         type: "image/png",
       },
     ],
@@ -90,14 +85,8 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
           rel="icon"
-          href="/favicons/favicon-16x16.png"
-          sizes="16x16"
-          type="image/png"
-        />
-        <link
-          rel="icon"
-          href="/favicons/favicon-32x32.png"
-          sizes="32x32"
+          href="/favicons/favicon-96x96.png"
+          sizes="96x96"
           type="image/png"
         />
         <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />

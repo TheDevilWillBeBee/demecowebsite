@@ -13,9 +13,9 @@ interface ProgramProps {
 }
 
 const defaultDays = [
-  { date: "May 26", day: "Day 1" },
-  { date: "May 27", day: "Day 2" },
-  { date: "May 28", day: "Day 3" },
+  { date: "May 27", day: "Day 1" },
+  { date: "May 28", day: "Day 2" },
+  { date: "May 29", day: "Day 3" },
 ];
 
 export default function Program({

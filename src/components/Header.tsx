@@ -10,20 +10,23 @@ import { useVisibility } from "@/hooks/useVisibility";
 // PLACEHOLDER: Update these default values for the new edition
 // ============================================================================
 const DEFAULT_SUBTITLE = "Artificial Life Perspectives";
-const DEFAULT_DATE_LOCATION = "Dates TBD • EPFL, Lausanne";
+const DEFAULT_DATE_LOCATION = "May 27-29, 2026 • EPFL, Lausanne";
+const DEFAULT_LOGO = "/logo-2026.png";
 
 interface HeaderProps {
   subtitle?: string;
   dateLocation?: string;
+  logo?: string;
 }
 
-export default function Header({ subtitle, dateLocation }: HeaderProps) {
+export default function Header({ subtitle, dateLocation, logo }: HeaderProps) {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const [gradientWidth, setGradientWidth] = useState(80);
   const { isScrolled, isInactive } = useVisibility();
 
   const displaySubtitle = subtitle ?? DEFAULT_SUBTITLE;
   const displayDateLocation = dateLocation ?? DEFAULT_DATE_LOCATION;
+  const displayLogo = logo ?? DEFAULT_LOGO;
 
   useEffect(() => {
     const updateGradientWidth = () => {
@@ -55,7 +58,7 @@ export default function Header({ subtitle, dateLocation }: HeaderProps) {
         >
           <div className="relative h-48 w-48 sm:h-80 sm:w-80 mx-auto mb-12">
             <Image
-              src="/logo.png"
+              src={displayLogo}
               alt="Workshop Logo"
               fill
               className="object-contain"
