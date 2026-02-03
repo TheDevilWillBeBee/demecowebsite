@@ -142,6 +142,14 @@ export const program: Record<string, Talk[]> = {
       speakerIds: ["jordan-cotler"],
       isBreak: false,
     },
+    {
+      time: "16:45",
+      title: "Research Talk (Title TBD)",
+      date: "May 28, 2025",
+      description: "",
+      speakerIds: ["jensen-suther"],
+      isBreak: false,
+    },
 
     {
       time: "17:30",

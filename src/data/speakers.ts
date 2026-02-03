@@ -17,7 +17,6 @@ export const speakers: Speaker[] = [
   //   image: "/speakers/speaker-photo.jpg",
   //   biography: "Speaker biography goes here...",
   // },
-
   {
     id: "lana-sinapayen",
     name: "Lana Sinapayen",
@@ -85,6 +84,14 @@ export const speakers: Speaker[] = [
     website: "",
     image: "/speakers/martin-biehl.jpg",
     biography: "Researcher at Cross Labs.",
+  },
+    {
+    id: "jensen-suther",
+    name: "Jensen Suther",
+    institution: "Harvard University",
+    website: "",
+    image: "/speakers/jensen-suther.png",
+    biography: "PhD Student at Harvard University.",
   },
 
 
