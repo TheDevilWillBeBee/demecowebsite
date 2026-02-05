@@ -196,10 +196,10 @@ export const program: Record<string, Talk[]> = {
     },
     {
       time: "14:00",
-      title: "Lightning Talks",
+      title: "Research Talk (Title TBD)",
       date: "May 29, 2025",
       description: "",
-      speakerIds: [],
+      speakerIds: ["lisa-soros"],
       isBreak: false,
     },
     {

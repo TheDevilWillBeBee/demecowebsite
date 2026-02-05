@@ -85,13 +85,21 @@ export const speakers: Speaker[] = [
     image: "/speakers/martin-biehl.jpg",
     biography: "Researcher at Cross Labs.",
   },
-    {
+  {
     id: "jensen-suther",
     name: "Jensen Suther",
     institution: "Harvard University",
     website: "",
     image: "/speakers/jensen-suther.png",
     biography: "Harvard University.",
+  },
+  {
+    id: "lisa-soros",
+    name: "Lisa Soros",
+    institution: "",
+    website: "",
+    image: "/speakers/lisa-soros.png",
+    biography: "",
   },
 
 
@@ -100,6 +108,6 @@ export const speakers: Speaker[] = [
 
 export const getSpeakerById = (id: string): Speaker | undefined => {
   // First check speakers, then check organizers
-  return speakers.find((speaker) => speaker.id === id) 
+  return speakers.find((speaker) => speaker.id === id)
     ?? organizers.find((organizer) => organizer.id === id);
 };
