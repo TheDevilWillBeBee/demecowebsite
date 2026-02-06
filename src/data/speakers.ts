@@ -96,10 +96,10 @@ export const speakers: Speaker[] = [
   {
     id: "lisa-soros",
     name: "Lisa Soros",
-    institution: "",
+    institution: "Nof1",
     website: "",
     image: "/speakers/lisa-soros.png",
-    biography: "",
+    biography: "Nof1",
   },
 
 
