@@ -22,7 +22,7 @@ export const speakers: Speaker[] = [
     name: "Lisa Soros",
     institution: "Nof1",
     website: "",
-    image: "/speakers/lisa-soros.jpg",
+    image: "/speakers/lisa-soros.png",
     biography: "Nof1",
   },
   {
