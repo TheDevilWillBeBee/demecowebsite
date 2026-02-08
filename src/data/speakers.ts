@@ -18,6 +18,14 @@ export const speakers: Speaker[] = [
   //   biography: "Speaker biography goes here...",
   // },
   {
+    id: "lisa-soros",
+    name: "Lisa Soros",
+    institution: "Nof1",
+    website: "",
+    image: "/speakers/lisa-soros.jpg",
+    biography: "Nof1",
+  },
+  {
     id: "lana-sinapayen",
     name: "Lana Sinapayen",
     institution: "Sony Computer Science Lab",
@@ -25,7 +33,6 @@ export const speakers: Speaker[] = [
     image: "/speakers/lana-sinapayen.png",
     biography: "Researcher at Sony and Associate Professor at National Insitute for Basic Biology, Japan.",
   },
-
   {
     id: "martin-schule",
     name: "Martin Schüle",
@@ -93,14 +100,7 @@ export const speakers: Speaker[] = [
     image: "/speakers/jensen-suther.png",
     biography: "Harvard University.",
   },
-  {
-    id: "lisa-soros",
-    name: "Lisa Soros",
-    institution: "Nof1",
-    website: "",
-    image: "/speakers/lisa-soros.png",
-    biography: "Nof1",
-  },
+
 
 
 
