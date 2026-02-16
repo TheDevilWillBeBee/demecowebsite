@@ -97,7 +97,7 @@ export const speakers: Speaker[] = [
     name: "Jensen Suther",
     institution: "Harvard University",
     website: "",
-    image: "/speakers/jensen-suther.png",
+    image: "/speakers/jensen-suther.jpg",
     biography: "Harvard University.",
   },
 
