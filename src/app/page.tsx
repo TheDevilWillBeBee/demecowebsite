@@ -40,6 +40,22 @@ export default function Home() {
         <Navbar />
         <Header />
         <div className="container mx-auto px-4">
+          <section className="sm:py-8 py-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="backdrop-blur-xl bg-black/50 rounded-xl p-6 border border-white/15">
+                <p className="text-white/95 text-base sm:text-lg leading-relaxed text-center">
+                  The workshop is free and open to anyone who registers. If you would like to attend, please contact us at{" "}
+                  <a
+                    href="mailto:demeco2026@gmail.com"
+                    className="text-blue-300 hover:text-blue-200 underline"
+                  >
+                    demeco2026@gmail.com
+                  </a>{" "}
+                  and complete the registration form we will share with you by May 15, 2026.
+                </p>
+              </div>
+            </div>
+          </section>
           <Abstract />
           <RecordedTalks />
           <Program onTalkClick={handleTalkClick} />
