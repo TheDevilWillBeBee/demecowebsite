@@ -36,9 +36,9 @@ export const program: Record<string, Talk[]> = {
     },
     {
       time: "11:15",
-      title: "Research Talk (Title TBD)",
+      title: "Meta-Game Objective: A Derivation",
       date: "May 27, 2025",
-      description: "",
+      description: "Is there a game that one can play that will lead us to AGI? Is there a game that will lead us to the automatic discovery of relevant skills? Assuming that the answer is yes, and working within a concrete framework, we will show that there are a consistency constraints that lead to a specific objective function.",
       speakerIds: ["clement-hongler"],
       isBreak: false,
     },
@@ -52,9 +52,9 @@ export const program: Record<string, Talk[]> = {
     },
     {
       time: "14:00",
-      title: "Research Talk (Title TBD)",
+      title: "Could scales of complexity emerge from a lack of environmental controllability?",
       date: "May 27, 2025",
-      description: "",
+      description: "Replicate, collaborate, specialize: several of the \"great transitions\" marking an increase in complexity in evolutionary history follow this pattern. Unicellular organisms becoming clonal multicellular organisms made of various specialized cells, super-organisms made of genetically specialized members, societies made of professionally specialized members... In these examples, an increase in complexity can be seen as an increase in the types of interactions between entities. In this talk, I will walk you through some definitions of complexity that I have used in my work, and how they relate to / differ from this definition of complexity as \"interaction diversity\", where interaction diversity increases the control that organisms have over the environment. What constraints may environment and entities satisfy to give rise to those dynamics?",
       speakerIds: ["lana-sinapayen"],
       isBreak: false,
     },
@@ -68,9 +68,9 @@ export const program: Record<string, Talk[]> = {
     },
     {
       time: "16:00",
-      title: "Research Talk (Title TBD)",
+      title: "Towards chemistries in dynamical systems",
       date: "May 27, 2025",
-      description: "",
+      description: "In chemistry and also in biology we are often concerned with multiple things (molecules or organisms) of the various kinds or species reacting with each other to produce other such things. Evolution, the process that supposedly converts chemistry into biology, also takes multiple things of various kinds as its starting point. I will present ongoing work on a way to describe aspects of any dynamical system in terms of multiple things and their reactions. To describe a dynamical system in this way three decisions have to be made. The first is how many different places there are at which molecules or chemical species can occur; the second is how to determine the species present (or not) at each place; and the third is the set of transitions and reactions that can occur between the species in the various places. For these choices to be compatible with the state update of the dynamical system each state must be able to determine transitions that take the currently occurring molecules to those occurring in the updated state. We also propose an additional requirement that there is always a unique way to choose the least amount of transitions occurring during state updates. As an example I will discuss gliders in the game of life cellular automaton.",
       speakerIds: ["martin-biehl"],
       isBreak: false,
     },
@@ -96,7 +96,7 @@ export const program: Record<string, Talk[]> = {
     },
     {
       time: "10:00",
-      title: "Research Talk (Title TBD)",
+      title: "Hints of complexity in neural cellular automata and non-neural cellular automata",
       date: "May 28, 2025",
       description: "",
       speakerIds: ["martin-schule"],
@@ -104,9 +104,9 @@ export const program: Record<string, Talk[]> = {
     },
     {
       time: "11:15",
-      title: "Research Talk (Title TBD)",
+      title: "Revisiting Symbiogenesis",
       date: "May 28, 2025",
-      description: "",
+      description: "Why do living organisms exist? This question was addressed in 1953 by Nils Barricelli, one of the founding fathers of artificial life, using numeric symbioorganisms (one dimensional cellular automata). In his CA models, reproduction and mutation were not sufficient to explain the origin of an evolutionary process (and therefore the origins of life). He proposed that the missing ingredient was symbiogenesis, the creation of a new entity out of a mutually beneficial relationship between two pre-existing entities. Barricelli's work has not been fully appreciated, however it is still very relevant today. In this presentation I will review Barricelli's ideas on symbiogenesis, recent ideas, and identify future directions and open questions.",
       speakerIds: ["stefano-nichele"],
       isBreak: false,
     },
@@ -136,9 +136,9 @@ export const program: Record<string, Talk[]> = {
     },
     {
       time: "16:00",
-      title: "Research Talk (Title TBD)",
+      title: "Turing's equations are Turing universal",
       date: "May 28, 2025",
-      description: "",
+      description: "Turing both developed the theory of pattern-formation in biological systems and the theory of universal computation. Turing's theory of pattern formation is based on a set of partial differential equations called reaction-diffusion equations (often with polynomial interactions), sometimes called \"Turing's equations\". We build a theory of what it means for PDEs to robustly perform computations, and demonstrate that Turing's equations are Turing universal. In doing so, we discover several mechanisms which are important for general, continuous-time analogue dynamics to robustly instantiate computation.",
       speakerIds: ["jordan-cotler"],
       isBreak: false,
     },
@@ -196,9 +196,9 @@ export const program: Record<string, Talk[]> = {
     },
     {
       time: "14:00",
-      title: "Research Talk (Title TBD)",
+      title: "Artificial Evolutionary Quantitative Finance",
       date: "May 29, 2025",
-      description: "",
+      description: "Artificial life methodologies have historically been applied to purely computational systems with strictly endogenous evolutionary dynamics. However, there lies another intriguing approach in allowing information from an external, real-world system (in this case, financial markets) to enable increased complexity within an artificial model. This talk provides foundations for understanding multi-scale evolutionary dynamics via a novel genetic programming system called FINPop (a Feasible-Infeasible N-Population approach). A core question explored during this talk is how best to generally explore inherently complex relationships within artificial systems from a hybrid qualitative and quantitative perspective, leveraging human intuition about natural living systems to gain insight into the realm of the artificial.",
       speakerIds: ["lisa-soros"],
       isBreak: false,
     },
@@ -227,7 +227,7 @@ export const program: Record<string, Talk[]> = {
       speakerIds: [""],
       isBreak: true,
     },
-    
+
   ],
 };
 
