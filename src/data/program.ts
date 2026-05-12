@@ -120,9 +120,9 @@ export const program: Record<string, Talk[]> = {
     },
     {
       time: "14:00",
-      title: "Research Talk (Title TBD)",
+      title: "Noise-robust cellular automata",
       date: "May 28, 2025",
-      description: "",
+      description: "One of the most fascinating aspects of living systems is their ability to reliably perform complex information-processing tasks, even in a noisy environment. While any faithful model of artificial life must share this feature, very few concrete statements are known about the kinds of cellular automata that can be noise robust. In this talk, I will overview what we currently know and don't know about this topic. I will review some old results from the literature, and explain very new developments that have led to interesting discoveries in statistical physics. The talk will end with an open-ended discussion on the next steps that we as a community should take to better address the emergence of complexity in noise-robust systems.",
       speakerIds: ["ethan-lake"],
       isBreak: false,
     },
@@ -144,9 +144,9 @@ export const program: Record<string, Talk[]> = {
     },
     {
       time: "16:45",
-      title: "Research Talk (Title TBD)",
+      title: "What Philosophy Demands of a Theory of Living Systems",
       date: "May 28, 2025",
-      description: "",
+      description: "This talk asks what it would take for a simulation not merely to model life-like behaviors, but to instantiate a living system itself. It argues that living systems are distinguished by internal standards of maintenance, malfunction, sickness, and death: they can fail not merely relative to an observer or designer but for themselves. Working backward from the possibility of internal failure, the paper identifies two deeper conditions of living systems: self-maintenance through time and the unity of the system whose activity is being maintained. Artificial life, if possible, would require not merely modeling life, but instantiating a self-maintaining system for which its own unity is at stake.",
       speakerIds: ["jensen-suther"],
       isBreak: false,
     },
