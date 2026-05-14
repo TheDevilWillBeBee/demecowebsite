@@ -43,12 +43,44 @@ export const speakers: Speaker[] = [
   },
 
   {
-    id: "google-zurich",
-    name: "Paradigms of Intelligence",
-    institution: "Google Zurich",
+    id: "eyvind-niklasson",
+    name: "Eyvind Niklasson",
+    institution: "Google Research (Paradigms of Intelligence)",
+    website: "",
+    image: "/speakers/eyvind-niklasson.png",
+    biography: "Researcher at Google Research (Paradigms of Intelligence).",
+  },
+  {
+    id: "mayalen-etcheverry",
+    name: "Mayalen Etcheverry",
+    institution: "Google Research (Paradigms of Intelligence)",
+    website: "",
+    image: "/speakers/mayalen-etcheverry.png",
+    biography: "Researcher at Google Research (Paradigms of Intelligence).",
+  },
+  {
+    id: "ettore-randazzo",
+    name: "Ettore Randazzo",
+    institution: "Google Research (Paradigms of Intelligence)",
+    website: "",
+    image: "/speakers/ettore-randazzo.png",
+    biography: "Researcher at Google Research (Paradigms of Intelligence).",
+  },
+  {
+    id: "alexander-mordvintsev",
+    name: "Alexander Mordvintsev",
+    institution: "Google Research (Paradigms of Intelligence)",
     website: "",
     image: "/speakers/alexander-mordvintsev.jpeg",
-    biography: "Paradigms of Intelligence team at Google Zurich.",
+    biography: "Researcher at Google Research (Paradigms of Intelligence).",
+  },
+  {
+    id: "charlotte",
+    name: "Charlotte",
+    institution: "Google Research (Paradigms of Intelligence)",
+    website: "",
+    image: "/speakers/charlotte-placeholder.svg",
+    biography: "Researcher at Google Research (Paradigms of Intelligence).",
   },
 
   {

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+  <title id="title">Charlotte Placeholder</title>
+  <desc id="desc">Simple faceless placeholder avatar with the letter C.</desc>
+  <rect width="400" height="400" fill="#1b1b1b"/>
+  <circle cx="200" cy="165" r="80" fill="#2c2c2c"/>
+  <rect x="90" y="260" width="220" height="90" rx="45" fill="#2c2c2c"/>
+  <text x="200" y="190" text-anchor="middle" font-size="96" font-family="Georgia, serif" fill="#d1d1d1">C</text>
+</svg>
