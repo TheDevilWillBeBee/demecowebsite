@@ -67,7 +67,7 @@ export const program: Record<string, Talk[]> = {
       isBreak: true,
     },
     {
-      time: "16:00-16:45",
+      time: "16:00",
       title: "Reasoning with NCAs",
       date: "May 27, 2025",
       description: "",
@@ -75,7 +75,7 @@ export const program: Record<string, Talk[]> = {
       isBreak: false,
     },
     {
-      time: "16:45-17:30",
+      time: "16:45",
       title: "Co-evolution of self-replication and computation in a digital primordial soup",
       date: "May 27, 2025",
       description: "",
@@ -179,7 +179,7 @@ export const program: Record<string, Talk[]> = {
       isBreak: true,
     },
     {
-      time: "10:00-11:30",
+      time: "10:00",
       title: "Towards chemistries in dynamical systems",
       date: "May 29, 2025",
       description: "In chemistry and also in biology we are often concerned with multiple things (molecules or organisms) of the various kinds or species reacting with each other to produce other such things. Evolution, the process that supposedly converts chemistry into biology, also takes multiple things of various kinds as its starting point. I will present ongoing work on a way to describe aspects of any dynamical system in terms of multiple things and their reactions. To describe a dynamical system in this way three decisions have to be made. The first is how many different places there are at which molecules or chemical species can occur; the second is how to determine the species present (or not) at each place; and the third is the set of transitions and reactions that can occur between the species in the various places. For these choices to be compatible with the state update of the dynamical system each state must be able to determine transitions that take the currently occurring molecules to those occurring in the updated state. We also propose an additional requirement that there is always a unique way to choose the least amount of transitions occurring during state updates. As an example I will discuss gliders in the game of life cellular automaton.",
@@ -187,7 +187,7 @@ export const program: Record<string, Talk[]> = {
       isBreak: false,
     },
     {
-      time: "11:30-12:00",
+      time: "11:30",
       title: "Is BFF just randomness in disguise?",
       date: "May 29, 2025",
       description: "",
@@ -195,7 +195,7 @@ export const program: Record<string, Talk[]> = {
       isBreak: false,
     },
     {
-      time: "12:00-12:30",
+      time: "12:00",
       title: "Growing Boolean Circuits: Why multipliers look like nematodes!",
       date: "May 29, 2025",
       description: "",

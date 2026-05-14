@@ -76,7 +76,7 @@ export const speakers: Speaker[] = [
   },
   {
     id: "charlotte",
-    name: "Charlotte",
+    name: "Charlotte Knierim",
     institution: "Google Research (Paradigms of Intelligence)",
     website: "",
     image: "/speakers/charlotte-placeholder.svg",

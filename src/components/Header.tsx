@@ -85,7 +85,7 @@ export default function Header({ subtitle, dateLocation, logo }: HeaderProps) {
             {/* Content div */}
             <div className="relative p-8">
               <h1
-                className="text-4xl md:text-6xl font-bold mb-6 font-munro"
+                className="text-4xl md:text-6xl font-bold mb-6"
                 ref={titleRef}
               >
                 Detection and Emergence of Complexity
