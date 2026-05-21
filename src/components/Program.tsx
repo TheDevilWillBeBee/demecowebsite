@@ -126,6 +126,17 @@ export default function Program({
                                 {idx < speakers.length - 1 && ","}
                               </p>
                             ))}
+                            {speakers.length === 0 && talk.presenter && (
+                              <p
+                                className={`text-sm ${
+                                  !talk.isBreak
+                                    ? "text-white/90"
+                                    : "text-white/60"
+                                }`}
+                              >
+                                {talk.presenter}
+                              </p>
+                            )}
                           </div>
                         </div>
                       </motion.button>

@@ -15,6 +15,7 @@ export interface Talk {
   speakerIds: string[];
   isBreak?: boolean;
   recordingUrl?: string;
+  presenter?: string;
 }
 
 export interface Video {
