@@ -79,7 +79,7 @@ export const speakers: Speaker[] = [
     name: "Charlotte Knierim",
     institution: "Google Research (Paradigms of Intelligence)",
     website: "",
-    image: "/speakers/charlotte-placeholder.svg",
+    image: "/speakers/charlotte-knierim.jpg",
     biography: "Researcher at Google Research (Paradigms of Intelligence).",
   },
 
