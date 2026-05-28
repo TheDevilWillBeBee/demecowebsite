@@ -245,7 +245,7 @@ export const program: Record<string, Talk[]> = {
     },
     {
       time: "16:15",
-      title: "TBA",
+      title: "Formal Approaches to Emergence: Challenges and Opportunities",
       date: "May 29, 2025",
       description: "",
       speakerIds: [],
@@ -288,17 +288,17 @@ export const program: Record<string, Talk[]> = {
       presenter: "Aleksandr Groznykh",
       isBreak: false,
     },
+    // {
+    //   time: "17:30",
+    //   title: "TBA",
+    //   date: "May 29, 2025",
+    //   description: "",
+    //   speakerIds: [],
+    //   presenter: "Arber Zela",
+    //   isBreak: false,
+    // },
     {
       time: "17:30",
-      title: "TBA",
-      date: "May 29, 2025",
-      description: "",
-      speakerIds: [],
-      presenter: "Arber Zela",
-      isBreak: false,
-    },
-    {
-      time: "17:45",
       title: "Phase transitions of J_1-J_2 Heisenberg model on the honeycomb lattice: a thermodynamics limit approach",
       date: "May 29, 2025",
       description: "",
@@ -307,7 +307,7 @@ export const program: Record<string, Talk[]> = {
       isBreak: false,
     },
     {
-      time: "18:00",
+      time: "17:45",
       title: "Equation Automata: How a Traffic Simulation Discovered the Ising Critical Temperature",
       date: "May 29, 2025",
       description: "",
@@ -317,7 +317,7 @@ export const program: Record<string, Talk[]> = {
     },
 
     {
-      time: "18:15",
+      time: "18:00",
       title: "Open-Ended Discussion",
       date: "May 29, 2025",
       description: "",
