@@ -13,6 +13,7 @@ import { getSpeakerById } from "./speakers";
 //   - speakerIds: string[] (array of speaker IDs from speakers.ts)
 //   - isBreak?: boolean (true for coffee breaks, lunch, etc.)
 //   - recordingUrl?: string (optional YouTube link after the event)
+//   - recordings?: { label: string; url: string }[] (for sessions with multiple recordings)
 // ============================================================================
 
 export const program: Record<string, Talk[]> = {
@@ -33,6 +34,11 @@ export const program: Record<string, Talk[]> = {
       description: "",
       speakerIds: ["barbora-hudcova", "vassilis-papadopoulos", "ehsan-pajouheshgar"],
       isBreak: false,
+      recordings: [
+        { label: "Vassilis's Research Overview", url: "https://youtu.be/uzC77PhFbeU" },
+        { label: "Barbora's Research Overview", url: "https://youtu.be/p1aa_bAKn88" },
+        { label: "Ehsan's Research Overview", url: "https://youtu.be/GU9KLTARmcA" },
+      ],
     },
     {
       time: "11:15",
@@ -41,6 +47,7 @@ export const program: Record<string, Talk[]> = {
       description: "Is there a game that one can play that will lead us to AGI? Is there a game that will lead us to the automatic discovery of relevant skills? Assuming that the answer is yes, and working within a concrete framework, we will show that there are a consistency constraints that lead to a specific objective function.",
       speakerIds: ["clement-hongler"],
       isBreak: false,
+      recordingUrl: "https://youtu.be/gxC8mRU_P-8",
     },
     {
       time: "12:30",
@@ -57,6 +64,7 @@ export const program: Record<string, Talk[]> = {
       description: "Replicate, collaborate, specialize: several of the \"great transitions\" marking an increase in complexity in evolutionary history follow this pattern. Unicellular organisms becoming clonal multicellular organisms made of various specialized cells, super-organisms made of genetically specialized members, societies made of professionally specialized members... In these examples, an increase in complexity can be seen as an increase in the types of interactions between entities. In this talk, I will walk you through some definitions of complexity that I have used in my work, and how they relate to / differ from this definition of complexity as \"interaction diversity\", where interaction diversity increases the control that organisms have over the environment. What constraints may environment and entities satisfy to give rise to those dynamics?",
       speakerIds: ["lana-sinapayen"],
       isBreak: false,
+      recordingUrl: "https://youtu.be/LacRwxo910I",
     },
     {
       time: "15:30",
@@ -73,6 +81,7 @@ export const program: Record<string, Talk[]> = {
       description: "",
       speakerIds: ["eyvind-niklasson", "mayalen-etcheverry"],
       isBreak: false,
+      recordingUrl: "https://youtu.be/umbk1Zg3ioo",
     },
     {
       time: "16:45",
@@ -81,6 +90,7 @@ export const program: Record<string, Talk[]> = {
       description: "",
       speakerIds: ["ettore-randazzo", "eyvind-niklasson"],
       isBreak: false,
+      recordingUrl: "https://youtu.be/2ac3zqK4rCg",
     },
 
     {
@@ -109,6 +119,7 @@ export const program: Record<string, Talk[]> = {
       description: "",
       speakerIds: ["martin-schule"],
       isBreak: false,
+      recordingUrl: "https://youtu.be/apMEEaeLHn4",
     },
     {
       time: "11:15",
@@ -133,6 +144,7 @@ export const program: Record<string, Talk[]> = {
       description: "One of the most fascinating aspects of living systems is their ability to reliably perform complex information-processing tasks, even in a noisy environment. While any faithful model of artificial life must share this feature, very few concrete statements are known about the kinds of cellular automata that can be noise robust. In this talk, I will overview what we currently know and don't know about this topic. I will review some old results from the literature, and explain very new developments that have led to interesting discoveries in statistical physics. The talk will end with an open-ended discussion on the next steps that we as a community should take to better address the emergence of complexity in noise-robust systems.",
       speakerIds: ["ethan-lake"],
       isBreak: false,
+      recordingUrl: "https://youtu.be/ePOLkZRYW1E",
     },
     {
       time: "15:30",
@@ -149,6 +161,7 @@ export const program: Record<string, Talk[]> = {
       description: "Turing both developed the theory of pattern-formation in biological systems and the theory of universal computation. Turing's theory of pattern formation is based on a set of partial differential equations called reaction-diffusion equations (often with polynomial interactions), sometimes called \"Turing's equations\". We build a theory of what it means for PDEs to robustly perform computations, and demonstrate that Turing's equations are Turing universal. In doing so, we discover several mechanisms which are important for general, continuous-time analogue dynamics to robustly instantiate computation.",
       speakerIds: ["jordan-cotler"],
       isBreak: false,
+      recordingUrl: "https://youtu.be/t292UBO9C9k",
     },
     {
       time: "16:45",
@@ -157,6 +170,7 @@ export const program: Record<string, Talk[]> = {
       description: "This talk asks what it would take for a simulation not merely to model life-like behaviors, but to instantiate a living system itself. It argues that living systems are distinguished by internal standards of maintenance, malfunction, sickness, and death: they can fail not merely relative to an observer or designer but for themselves. Working backward from the possibility of internal failure, the paper identifies two deeper conditions of living systems: self-maintenance through time and the unity of the system whose activity is being maintained. Artificial life, if possible, would require not merely modeling life, but instantiating a self-maintaining system for which its own unity is at stake.",
       speakerIds: ["jensen-suther"],
       isBreak: false,
+      recordingUrl: "https://youtu.be/t292UBO9C9k",
     },
 
     {
@@ -185,6 +199,7 @@ export const program: Record<string, Talk[]> = {
       description: "In chemistry and also in biology we are often concerned with multiple things (molecules or organisms) of the various kinds or species reacting with each other to produce other such things. Evolution, the process that supposedly converts chemistry into biology, also takes multiple things of various kinds as its starting point. I will present ongoing work on a way to describe aspects of any dynamical system in terms of multiple things and their reactions. To describe a dynamical system in this way three decisions have to be made. The first is how many different places there are at which molecules or chemical species can occur; the second is how to determine the species present (or not) at each place; and the third is the set of transitions and reactions that can occur between the species in the various places. For these choices to be compatible with the state update of the dynamical system each state must be able to determine transitions that take the currently occurring molecules to those occurring in the updated state. We also propose an additional requirement that there is always a unique way to choose the least amount of transitions occurring during state updates. As an example I will discuss gliders in the game of life cellular automaton.",
       speakerIds: ["martin-biehl"],
       isBreak: false,
+      recordingUrl: "https://youtu.be/ph9N4HfYodo",
     },
     {
       time: "11:30",
@@ -201,6 +216,7 @@ export const program: Record<string, Talk[]> = {
       description: "",
       speakerIds: ["alexander-mordvintsev"],
       isBreak: false,
+      recordingUrl: "https://youtu.be/0_7EF8JjxLc",
     },
     {
       time: "12:30",
@@ -217,6 +233,7 @@ export const program: Record<string, Talk[]> = {
       description: "Artificial life methodologies have historically been applied to purely computational systems with strictly endogenous evolutionary dynamics. However, there lies another intriguing approach in allowing information from an external, real-world system (in this case, financial markets) to enable increased complexity within an artificial model. This talk provides foundations for understanding multi-scale evolutionary dynamics via a novel genetic programming system called FINPop (a Feasible-Infeasible N-Population approach). A core question explored during this talk is how best to generally explore inherently complex relationships within artificial systems from a hybrid qualitative and quantitative perspective, leveraging human intuition about natural living systems to gain insight into the realm of the artificial.",
       speakerIds: ["lisa-soros"],
       isBreak: false,
+      recordingUrl: "https://youtu.be/HRgWPlJdy-w",
     },
     {
       time: "15:30",

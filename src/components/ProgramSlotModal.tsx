@@ -23,6 +23,11 @@ export default function ProgramSlotModal({
 
   const getTalkSpeakers = getTalkSpeakersFunc ?? defaultGetTalkSpeakers;
   const speakers = getTalkSpeakers(talk);
+  const recordings = talk.recordings ?? (
+    talk.recordingUrl
+      ? [{ label: "Watch Recording", url: talk.recordingUrl }]
+      : []
+  );
 
   return (
     <Modal isOpen={true} onClose={onClose}>
@@ -31,28 +36,31 @@ export default function ProgramSlotModal({
         <p className="text-white/60 mb-6">{talk.date}</p>
         <p className="text-white/80 mb-8 whitespace-pre-wrap text-justify">{talk.description}</p>
 
-        {talk.recordingUrl && (
-          <div className="flex justify-center mb-8">
-            <motion.a
-              href={talk.recordingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-black/30 backdrop-blur-xl border border-white/10 text-white/90 hover:bg-black/40 hover:border-white/30 transition-all duration-300 ease-in-out shadow-lg"
-              aria-label="Watch recording on YouTube"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                className="h-6 w-6 mx-2 text-red-500"
-                fill="currentColor"
-                aria-hidden="true"
+        {recordings.length > 0 && (
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
+            {recordings.map((recording) => (
+              <motion.a
+                key={recording.url}
+                href={recording.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-black/30 backdrop-blur-xl border border-white/10 text-white/90 hover:bg-black/40 hover:border-white/30 transition-all duration-300 ease-in-out shadow-lg"
+                aria-label={`${recording.label} on YouTube`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
               >
-                <path d="M23.5 6.2c-.3-1.3-1.3-2.3-2.6-2.6C18.3 3 12 3 12 3s-6.3 0-8.9.6C1.8 3.9.8 4.9.5 6.2.1 8.8.1 12 .1 12s0 3.2.4 5.8c.3 1.3 1.3 2.3 2.6 2.6 2.6.6 8.9.6 8.9.6s6.3 0 8.9-.6c1.3-.3 2.3-1.3 2.6-2.6.4-2.6.4-5.8.4-5.8s0-3.2-.4-5.8ZM9.75 15.02V8.98L15.5 12l-5.75 3.02Z" />
-              </svg>
-              <span className="font-semibold">Watch Recording</span>
-            </motion.a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  className="h-6 w-6 text-red-500"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path d="M23.5 6.2c-.3-1.3-1.3-2.3-2.6-2.6C18.3 3 12 3 12 3s-6.3 0-8.9.6C1.8 3.9.8 4.9.5 6.2.1 8.8.1 12 .1 12s0 3.2.4 5.8c.3 1.3 1.3 2.3 2.6 2.6 2.6.6 8.9.6 8.9.6s6.3 0 8.9-.6c1.3-.3 2.3-1.3 2.6-2.6.4-2.6.4-5.8.4-5.8s0-3.2-.4-5.8c-.3-1.3-1.3-2.3-2.6-2.6ZM9.75 15.02V8.98L15.5 12l-5.75 3.02Z" />
+                </svg>
+                <span className="font-semibold">{recording.label}</span>
+              </motion.a>
+            ))}
           </div>
         )}
 

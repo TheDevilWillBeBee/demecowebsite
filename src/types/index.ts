@@ -15,6 +15,10 @@ export interface Talk {
   speakerIds: string[];
   isBreak?: boolean;
   recordingUrl?: string;
+  recordings?: {
+    label: string;
+    url: string;
+  }[];
   presenter?: string;
 }
 
